@@ -44,7 +44,6 @@ class List extends Component {
                         { this.list() }
                     </tbody>
                 </table>
-
             </div>
         );
     }
