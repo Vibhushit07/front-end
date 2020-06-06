@@ -23,7 +23,7 @@ class Display extends Component {
             this.state.uid === null ?
                 <List setuid = { this.setuid } />
             :
-                <Post />
+                <Post uid = { this.state.uid } />
         );
     }
 }
