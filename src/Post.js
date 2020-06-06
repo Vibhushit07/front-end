@@ -20,13 +20,11 @@ class Post extends Component {
 
         const items = this.state.data.map(d => {
             return(
-                <ul>
-                    <li>{d.id}</li>
-                    <ul>
-                        <li>{d.title}</li>
-                        <li>{d.body}</li>
-                    </ul>
-                </ul>
+                <tr>
+                    <td>{d.id}</td>
+                    <td>{d.title}</td>
+                    <td>{d.body}</td>
+                </tr>
             );
         });
 
@@ -39,7 +37,16 @@ class Post extends Component {
                 <div></div>
             :
                 <div>
-                    {this.display()}
+                    <table>
+                        <thead>
+                            <td>Post Id</td>
+                            <td>Post Title</td>
+                            <td>Post Body</td>
+                        </thead>
+                        <tbody>
+                            { this.display() }
+                        </tbody>
+                    </table>
                 </div>
         );
     }

@@ -19,10 +19,10 @@ class List extends Component {
     list() {
         const items = this.state.data.map(d => {
             return(
-                <ul onClick = { () => this.props.setuid(d.id)} >
-                    <li>{d.id}</li>
-                    <li>{d.name}</li>
-                </ul>
+                <tr onClick = { () => this.props.setuid(d.id)} >
+                    <td>{d.id}</td>
+                    <td>{d.name}</td>
+                </tr>
             );
         });
 
@@ -35,7 +35,16 @@ class List extends Component {
             <div></div>
             :
             <div>
-                { this.list() }
+                <table>
+                    <thead>
+                        <td>User Id</td>
+                        <td>User name</td>
+                    </thead>
+                    <tbody>
+                        { this.list() }
+                    </tbody>
+                </table>
+
             </div>
         );
     }
