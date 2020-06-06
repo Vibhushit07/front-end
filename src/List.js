@@ -13,7 +13,6 @@ class List extends Component {
     async componentDidMount() {
         const result = await fetch("https://jsonplaceholder.typicode.com/users");
         const data = await result.json();
-        console.log(data);
         this.setState({data: data});
     }
 
